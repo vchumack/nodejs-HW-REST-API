@@ -6,7 +6,7 @@ const getById = async (req, res) => {
   // const result = await Contact.findById(id);
 
   const result = await Contact.findOne({
-    id,
+    _id: id,
     owner: req.user._id,
   });
 
